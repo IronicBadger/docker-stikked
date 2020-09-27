@@ -33,7 +33,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ironicbadger/stikked:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/stikked:latest
       
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
